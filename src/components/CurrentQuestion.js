@@ -7,6 +7,7 @@ import { Summary } from './Summary';
 export const CurrentQuestion = () => {
   const dispatch = useDispatch();
   const question = useSelector((state) => state.quiz.questions[state.quiz.currentQuestionIndex]);
+  const questions = useSelector((state) => state.quiz.questions);
   const showSummary = useSelector((state) => state.quiz.quizOver);
 
   if (!question) {
@@ -26,7 +27,7 @@ export const CurrentQuestion = () => {
               )
             })}
           </div>
-
+          <p>{question.id}/{questions.length}</p>
           <button type="button" onClick={() => dispatch(quiz.actions.goToNextQuestion())}>Next Question</button>
         </section>
       )}
