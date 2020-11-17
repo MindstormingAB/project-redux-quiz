@@ -1,17 +1,51 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 // Change these to your own questions!
 const questions = [
-  { id: 1, questionText: 'Who set the Olympic record for the 100m dash in 2012?', options: ['Usain Bolt', 'Justin Gatlin', 'Tyson Gay', 'Asafa Powell'], correctAnswerIndex: 0 },
-  { id: 2, questionText: 'When was Michael Phelps last named male World Swimmer of the Year?', options: ['2012', '2014', '2016', '2018'], correctAnswerIndex: 2 }
-]
+  {
+    id: 1,
+    questionText: 'Turtles have been roaming the earth for over:',
+    options: ['200 million years', '100 million years', '50 million years', '10 million years'],
+    correctAnswerIndex: 0
+  },
+  {
+    id: 2,
+    questionText: 'How much is elephant’s skin thick in most places:',
+    options: ['4 cm', '5 cm', '2.5 cm', '1 cm'],
+    correctAnswerIndex: 2
+  },
+  {
+    id: 3,
+    questionText: 'Tiger cubs are born blind:',
+    options: ['and all of the cubs survive', 'and only third of the cubs survive', 'and only fourth of the cubs survive', 'and only half of the cubs survive'],
+    correctAnswerIndex: 3
+  },
+  {
+    id: 4,
+    questionText: 'Foxes make:',
+    options: ['5 different sounds', '40 different sounds', '3 different sounds', '10 different sounds'],
+    correctAnswerIndex: 1
+  },
+  {
+    id: 5,
+    questionText: 'Hippo are considered:',
+    options: ['the first largest land animal on Earth', 'the third largest land animal on Earth', 'the fourth largest land animal on Earth', 'the second largest land animal on Earth'],
+    correctAnswerIndex: 4
+  },
+  {
+    id: 6,
+    questionText: 'How long can Zebras travel?',
+    options: ['500 mile', '200 mile', '100 mile', '50 mile'],
+    correctAnswerIndex: 0
+  }
+];
 
 const initialState = {
   questions,
   answers: [],
   currentQuestionIndex: 0,
   quizOver: false
-}
+};
 
 export const quiz = createSlice({
   name: 'quiz',
