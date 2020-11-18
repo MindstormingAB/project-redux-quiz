@@ -12,4 +12,5 @@ export const NextButton = styled.button`
  background-color: #fbbedf; 
  border-radius: 15px;
  border:none;
+ font-size: 18px;
 `

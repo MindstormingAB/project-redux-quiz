@@ -13,9 +13,9 @@ code {
 }
 
 .correct:disabled {
-  background: green;
+  background: #28df99;
 }
 
 .wrong:disabled {
-  background: red;
+  background: #ff7171;
 }
