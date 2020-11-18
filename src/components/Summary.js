@@ -10,6 +10,11 @@ export const Summary = () => {
   return (
     <section>
       <div>Summary: {correctAnswers.length} / {answers.length}</div>
+      {answers.map((item) => {
+        return (
+          <p key={item.quesitonId}>Question {item.questionId}</p>
+        )
+      })}
       <button type="button" onClick={() => dispatch(quiz.actions.restart())}>Restart</button>
     </section>
 
