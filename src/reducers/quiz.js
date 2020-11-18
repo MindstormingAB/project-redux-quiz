@@ -11,7 +11,7 @@ const questions = [
   },
   {
     id: 2,
-    questionText: '🐘 How much is elephant’s skin thick in most places:',
+    questionText: '🐘 How thick is an elephant’s skin in most places:',
     options: ['4 cm', '5 cm', '2.5 cm', '1 cm'],
     correctAnswerIndex: 2,
     image: 'elephant.jpg'
@@ -32,14 +32,14 @@ const questions = [
   },
   {
     id: 5,
-    questionText: '🦛 Hippo are considered:',
-    options: ['the first largest land animal on Earth', 'the third largest land animal on Earth', 'the fourth largest land animal on Earth', 'the second largest land animal on Earth'],
+    questionText: '🦛 Hippos are considered:',
+    options: ['the first largest land animal', 'the third largest land animal', 'the fourth largest land animal', 'the second largest land animal'],
     correctAnswerIndex: 4,
     image: 'hippo.jpg'
   },
   {
     id: 6,
-    questionText: '🦓 How long can Zebras travel?',
+    questionText: '🦓 How far can Zebras travel?',
     options: ['500 mile', '200 mile', '100 mile', '50 mile'],
     correctAnswerIndex: 0,
     image: 'zebra.jpg'
