@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { quiz } from 'reducers/quiz';
 
 import { Summary } from './Summary';
+import { Container, AnswerContainer, Button, NextButton } from './CurrentQuestionStyling';
 
 export const CurrentQuestion = () => {
   const dispatch = useDispatch();
@@ -32,12 +33,13 @@ export const CurrentQuestion = () => {
     <>
       {showSummary && <Summary />}
       {!showSummary && (
-        <section>
-          <h1>Question: {question.questionText}</h1>
-          <div>
+        <Container>
+          <h1>Animal quiz</h1>
+          <h2>{question.questionText}</h2>
+          <AnswerContainer>
             {question.options.map((item, index) => {
               return (
-                <button
+                <Button
                   disabled={answer}
                   onClick={() => dispatch(quiz.actions.submitAnswer({
                     questionId: question.id,
@@ -47,18 +49,18 @@ export const CurrentQuestion = () => {
                   type="button"
                   key={index}>
                   {item}
-                </button>
+                </Button>
               )
             })}
-          </div>
+          </AnswerContainer>
           <p>{question.id}/{questions.length}</p>
-          <button
+          <NextButton
             type="button"
             disabled={!answer}
             onClick={() => dispatch(quiz.actions.goToNextQuestion())}>
             Next Question
-          </button>
-        </section>
+          </NextButton>
+        </Container>
       )}
     </>
   );

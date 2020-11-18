@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { quiz } from 'reducers/quiz';
+import { Container, NextButton } from './SummaryStyling';
 
 export const Summary = () => {
   const dispatch = useDispatch();
@@ -8,15 +9,14 @@ export const Summary = () => {
   const correctAnswers = answers.map((item) => item.isCorrect).filter((x) => x === true);
 
   return (
-    <section>
-      <div>Summary: {correctAnswers.length} / {answers.length}</div>
+    <Container>
+      <h1>Your results: {correctAnswers.length} / {answers.length}</h1>
       {answers.map((item) => {
         return (
-          <p key={item.quesitonId}>Question {item.questionId}</p>
+          <p key={item.questionId}>Question {item.questionId}</p>
         )
       })}
-      <button type="button" onClick={() => dispatch(quiz.actions.restart())}>Restart</button>
-    </section>
-
+      <NextButton type="button" onClick={() => dispatch(quiz.actions.restart())}>Restart</NextButton>
+    </Container>
   )
 }
