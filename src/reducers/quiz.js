@@ -34,7 +34,7 @@ const questions = [
     id: 5,
     questionText: '🦛 Hippos are considered:',
     options: ['the first largest land animal', 'the third largest land animal', 'the fourth largest land animal', 'the second largest land animal'],
-    correctAnswerIndex: 4,
+    correctAnswerIndex: 3,
     image: 'hippo.jpg'
   },
   {

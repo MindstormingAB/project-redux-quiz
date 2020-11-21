@@ -21,7 +21,7 @@ export const CurrentQuestion = () => {
       {showSummary && <Summary />}
       {!showSummary && (
         <Container>
-          <h1>Animal quiz</h1>
+          <h1>Wild Animals quiz</h1>
           <Image />
           <h2>{question.questionText}</h2>
           <Options />
