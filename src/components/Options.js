@@ -14,10 +14,10 @@ export const Options = () => {
   const getAnswerColor = (index) => {
     const isSelectedAnswerCorrect = answer && answer.answerIndex === index;
     if (isSelectedAnswerCorrect && answer.isCorrect) {
-      return 'correct'
+      return '#28df99'
     }
     if (isSelectedAnswerCorrect && !answer.isCorrect) {
-      return 'wrong'
+      return '#ff7171'
     }
     return ''
   };
@@ -32,7 +32,7 @@ export const Options = () => {
               questionId: question.id,
               answerIndex: index
             }))}
-            className={`${getAnswerColor(index)}`}
+            inputBackground={`${getAnswerColor(index)}`}
             type="button"
             key={index}>
             {item}

@@ -22,7 +22,7 @@ export const Button = styled.button`
   width: 240px;
   border:none;
   border-radius:3px;
-  background-color: #f3eac2;
+  background-color: ${(props) => props.inputBackground || '#f3eac2'};
   @media (min-width: 1024px) {
     margin: 20px;  
     width: 150px;
